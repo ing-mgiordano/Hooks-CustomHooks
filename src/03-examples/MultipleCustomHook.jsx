@@ -1,3 +1,4 @@
+import React from "react"
 import { useFetch, useCounter  } from "../hooks"
 import { Quote, Loading } from "./"
 
@@ -28,10 +29,18 @@ export const MultipleCustomHook = () => {
         }
 
       <div className="d-flex justify-content-between">
-        <button className="btn btn-primary" onClick={ () => handleDecrement() }>
+        <button 
+          className="btn btn-primary" 
+          onClick={ () => handleDecrement() }
+          disabled={ isLoading }
+        >
           Previous pokemon
         </button>
-        <button className="btn btn-primary " onClick={ () => handleIncrement() }>
+        <button 
+          className="btn btn-primary " 
+          onClick={ () => handleIncrement() }
+          disabled={ isLoading }
+        >
           Next pokemon
         </button>
       </div>
